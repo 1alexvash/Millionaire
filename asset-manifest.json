@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Millionaire/static/css/main.64aecf84.chunk.css",
+    "main.js": "/Millionaire/static/js/main.6ad35065.chunk.js",
+    "main.js.map": "/Millionaire/static/js/main.6ad35065.chunk.js.map",
+    "runtime-main.js": "/Millionaire/static/js/runtime-main.6ed37a87.js",
+    "runtime-main.js.map": "/Millionaire/static/js/runtime-main.6ed37a87.js.map",
+    "static/js/2.7ca04fa4.chunk.js": "/Millionaire/static/js/2.7ca04fa4.chunk.js",
+    "static/js/2.7ca04fa4.chunk.js.map": "/Millionaire/static/js/2.7ca04fa4.chunk.js.map",
+    "index.html": "/Millionaire/index.html",
+    "precache-manifest.055433032bb5279862e79557aa815ffb.js": "/Millionaire/precache-manifest.055433032bb5279862e79557aa815ffb.js",
+    "service-worker.js": "/Millionaire/service-worker.js",
+    "static/css/main.64aecf84.chunk.css.map": "/Millionaire/static/css/main.64aecf84.chunk.css.map",
+    "static/js/2.7ca04fa4.chunk.js.LICENSE.txt": "/Millionaire/static/js/2.7ca04fa4.chunk.js.LICENSE.txt",
+    "static/media/main.css": "/Millionaire/static/media/money-bg.4114f0ac.jpg",
+    "static/media/stonks.jpg": "/Millionaire/static/media/stonks.545f63e3.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6ed37a87.js",
+    "static/js/2.7ca04fa4.chunk.js",
+    "static/css/main.64aecf84.chunk.css",
+    "static/js/main.6ad35065.chunk.js"
+  ]
+}

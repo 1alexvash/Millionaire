@@ -1,0 +1,192 @@
+@import "reset";
+@import "responsive";
+
+body {
+  &:after {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/money-bg.jpg);
+    background-size: contain;
+    background-position: 50%;
+    height: 100vh;
+    opacity: 0.5;
+    z-index: -1;
+  }
+}
+
+.Preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 1;
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    transform: translate(-50%, -50%);
+    @include responsive(640px) {
+      width: 100%;
+    }
+    .stonks {
+      vertical-align: middle;
+      width: 100%;
+      display: inline-block;
+      animation: showImage 5s;
+      @keyframes showImage {
+        from {
+          opacity: 0.5;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    }
+    .progress {
+      height: 20px;
+      background: rgba(blue, 0.5);
+      .bar {
+        width: 100%;
+        height: 100%;
+        background: deepskyblue;
+        animation: progress 5s;
+        @keyframes progress {
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.App {
+  .info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 15px;
+    background: white;
+    border: 1px solid gray;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    transition: 1s;
+  }
+  @include responsive(640px) {
+    .info {
+      width: 100%;
+      border-left: none;
+      border-right: none;
+      padding: 20px;
+    }
+  }
+  &.App-results {
+    .info {
+      width: 540px;
+      @include responsive(640px) {
+        width: 100%;
+      }
+    }
+  }
+  h1 {
+    font-size: 24px;
+    padding-bottom: 10px;
+    font-weight: normal;
+    font-style: italic;
+  }
+  form {
+    label {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      p {
+        flex: 2;
+      }
+      input {
+        flex: 1;
+        border: 1px solid black;
+        padding: 4px;
+      }
+    }
+    button {
+      margin-top: 20px;
+      padding: 8px 20px;
+      width: 100%;
+      transition: 0.7s;
+      &:hover {
+        cursor: pointer;
+        background: #000;
+        color: white;
+      }
+    }
+  }
+
+  .Graph {
+    display: flex;
+    align-items: baseline;
+    height: 0;
+    transition: 2s;
+    @include responsive(640px, 640px) {
+      position: relative;
+    }
+    .data {
+      position: relative;
+      flex: 1;
+      height: 100%;
+      background: linear-gradient(lighten(deepskyblue, 10%), deepskyblue);
+      @include responsive(640px, 640px) {
+        position: static;
+      }
+      &:hover {
+        cursor: pointer;
+        .tip {
+          display: block;
+        }
+      }
+      .tip {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: max-content;
+        text-align: center;
+        background-color: rgba(black, 0.8);
+        color: white;
+        display: none;
+        border: 1px solid black;
+        border-radius: 4px;
+        padding: 4px 8px;
+        transform: translate(-50%, -150%);
+        z-index: 1;
+        @include responsive(640px, 640px) {
+          transform: translate(0, 0);
+        }
+      }
+    }
+  }
+  .years-to-the-goal {
+    margin: 10px 0;
+  }
+  .return {
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 4px;
+    transition: 0.3s;
+    &:hover {
+      cursor: pointer;
+      background: #000;
+      color: white;
+    }
+  }
+}

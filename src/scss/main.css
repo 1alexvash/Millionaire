@@ -1,0 +1,303 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  width: 100%;
+}
+
+body:after {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/money-bg.jpg);
+  background-size: contain;
+  background-position: 50%;
+  height: 100vh;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.Preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 1;
+}
+
+.Preloader .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (max-width: 640px) {
+  .Preloader .content {
+    width: 100%;
+  }
+}
+
+.Preloader .content .stonks {
+  vertical-align: middle;
+  width: 100%;
+  display: inline-block;
+  -webkit-animation: showImage 5s;
+          animation: showImage 5s;
+}
+
+@-webkit-keyframes showImage {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showImage {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.Preloader .content .progress {
+  height: 20px;
+  background: rgba(0, 0, 255, 0.5);
+}
+
+.Preloader .content .progress .bar {
+  width: 100%;
+  height: 100%;
+  background: deepskyblue;
+  -webkit-animation: progress 5s;
+          animation: progress 5s;
+}
+
+@-webkit-keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.App .info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 15px;
+  background: white;
+  border: 1px solid gray;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+@media (max-width: 640px) {
+  .App .info {
+    width: 100%;
+    border-left: none;
+    border-right: none;
+    padding: 20px;
+  }
+}
+
+.App.App-results .info {
+  width: 540px;
+}
+
+@media (max-width: 640px) {
+  .App.App-results .info {
+    width: 100%;
+  }
+}
+
+.App h1 {
+  font-size: 24px;
+  padding-bottom: 10px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.App form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0;
+}
+
+.App form label p {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.App form label input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 1px solid black;
+  padding: 4px;
+}
+
+.App form button {
+  margin-top: 20px;
+  padding: 8px 20px;
+  width: 100%;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.App form button:hover {
+  cursor: pointer;
+  background: #000;
+  color: white;
+}
+
+.App .Graph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  height: 0;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+@media (max-width: 640px) {
+  .App .Graph {
+    position: relative;
+  }
+}
+
+@media (max-height: 640px) {
+  .App .Graph {
+    position: relative;
+  }
+}
+
+.App .Graph .data {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#33ccff), to(deepskyblue));
+  background: linear-gradient(#33ccff, deepskyblue);
+}
+
+@media (max-width: 640px) {
+  .App .Graph .data {
+    position: static;
+  }
+}
+
+@media (max-height: 640px) {
+  .App .Graph .data {
+    position: static;
+  }
+}
+
+.App .Graph .data:hover {
+  cursor: pointer;
+}
+
+.App .Graph .data:hover .tip {
+  display: block;
+}
+
+.App .Graph .data .tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: none;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 4px 8px;
+  -webkit-transform: translate(-50%, -150%);
+          transform: translate(-50%, -150%);
+  z-index: 1;
+}
+
+@media (max-width: 640px) {
+  .App .Graph .data .tip {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@media (max-height: 640px) {
+  .App .Graph .data .tip {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+.App .years-to-the-goal {
+  margin: 10px 0;
+}
+
+.App .return {
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 4px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .return:hover {
+  cursor: pointer;
+  background: #000;
+  color: white;
+}

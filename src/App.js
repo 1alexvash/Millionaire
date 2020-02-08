@@ -31,7 +31,7 @@ const App = () => {
 
   return (
     <div className={`App ${graph.length !== 0 ? "App-results" : ""}`}>
-      {/* <Preloader /> */}
+      <Preloader />
       <div className="info">
         {graph.length === 0 && (
           <Fragment>

@@ -184,9 +184,11 @@ body:after {
 }
 
 .App form button {
-  margin-top: 20px;
   padding: 8px 20px;
-  width: 100%;
+  width: 50%;
+  margin: 20px auto 0 auto;
+  background: lightgray;
+  display: block;
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
